@@ -18,21 +18,21 @@ body {
 #questionmark {
   position: absolute;
   font-family: monospace;
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
   border-radius: 10px;
   padding: 20px;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 600%;
-  background-image: linear-gradient(to top left, #0ee6db, blueviolet);
   transition: 0.5s;
+  color: black;
+  box-shadow: 4px 2px 2px black;
+  background-image: linear-gradient(to top left, #0ee6db, blueviolet);
 }
 
 #questionmark:hover {
-  color: black;
   background-image: linear-gradient(to top left, orange, #0aa6db);
 }
 
