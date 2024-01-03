@@ -1,3 +1,81 @@
+var listArr = [{
+	"name": "Käsekuchen",
+	"image": "images/cake.png",
+	"message": "Hurra! heute ist cheat day!"
+},
+{
+	"name": "Obstquark",
+	"image": "images/obstquark.png",
+	"message": "Nom nom nom nom..."
+},
+{
+	"name": "Nudeln mit Tomatensoße",
+	"image": "images/nudeln.jpg",
+	"message": "Lecker!"
+},
+{
+	"name": "Bohnenburger",
+	"image": "images/Veganer-Kidneybohnen-Burger.webp",
+	"message": "Lecker!"
+},
+{
+	"name": "Fächerkartoffeln",
+	"image": "images/faecherkartoffeln.jpg",
+	"message": "Lecker!"
+},
+{
+	"name": "Porrigde",
+	"image": "images/porrigde_mit_apfel_und_heidelbeeren.jpg",
+	"message": "Lecker!"
+},
+{
+	"name": "Quinoa bowl",
+	"image": "images/quinoasalat.webp",
+	"message": "Lecker!"
+},
+{
+	"name": "Kichererbsen Curry",
+	"image": "images/kichererbsencurry.webp",
+	"message": "Sehr gut."
+},
+{
+	"name": "Couscous",
+	"image": "images/couscous-salat-lecker-wuerzig.jpg",
+	"message": ""
+},
+{
+	"name": "Linseneintopf",
+	"image": "images/linseneintopf.jpg",
+	"message": "Der Klassiker."
+},
+{
+	"name": "Quinoa bowl",
+	"image": "images/quinoasalat.webp",
+	"message": "Lecker!"
+},
+{
+	"name": "Kichererbsen Curry",
+	"image": "images/kichererbsencurry.webp",
+	"message": "Sehr gut."
+},
+{
+	"name": "Obstquark",
+	"image": "images/obstquark.png",
+	"message": "Nom nom nom nom..."
+}
+];
+
+var strHTML = '';
+listArr.forEach(function (item) {
+	strHTML += `<div class="item">
+		  <h1>${item.name}</h1>
+		  <img class="bild" src="${item.image}" alt="Dinosaur" />
+		  Lecker!
+		</div>`;
+})
+document.querySelector("#slider").insertAdjacentHTML("beforeend", strHTML);
+
+
 let items = document.querySelectorAll('.slider .item');
 
 const MAXTIME = 20;
@@ -25,6 +103,7 @@ function loadShow() {
 	for (var i = 1; i < 4; i++) {
 		let r = other_r[i - 1];
 		items[r].style.transform = `translateX(${-120 * i}px) scale(${1 - 0.2 * i}) perspective(16px) rotateY(1deg)`;
+		//items[r].style.transform = `translateX(${-120 * i}px) scale(1 - (* -0.2 i)) perspective(16px) rotateY(1deg)`;
 		items[r].style.filter = 'blur(5px)';
 		items[r].style.opacity = 0.6;
 	}
@@ -69,3 +148,4 @@ mbutton.onclick = async function myFunction() {
 	popup = true;
 	mbutton.firstChild.data = "Winner!";
 }
+
