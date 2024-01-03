@@ -53,6 +53,7 @@ function showActiveItem () {
   items[active].style.zIndex = 1
   items[active].style.filter = 'none'
   items[active].style.opacity = 1
+  items[active].onclick = pick_a_recipe
 }
 
 function showOtherItem (item, index) {
@@ -89,7 +90,9 @@ async function pick_a_recipe () {
   }
 
   hide_cards()
-  items[active].style.opacity = 1
+  //items[active].style.opacity = 1
+  //items[active].onclick = pick_a_recipe
+  showActiveItem()
   mbutton.firstChild.data = 'Winner!'
 }
 
