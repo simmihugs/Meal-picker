@@ -4,7 +4,7 @@ var strHTML = ''
 listArr.forEach(function (item) {
   strHTML += `<div class="item">
 		  <h1>${item.name}</h1>
-		  <img class="bild" src="${item.image}" alt="Dinosaur" />
+		  <img class="bild" src="${item.image}" alt="${item.alt}" />
 		  ${item.message}
 		</div>`
 })
