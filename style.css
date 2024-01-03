@@ -1,85 +1,84 @@
 body {
-    background-image:
-    	linear-gradient(to top right, #0ee6db, #057d1b);    
-    min-height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: monospace;
+  background-image: linear-gradient(to top right, #0ee6db, #057d1b);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
 }
 
 .slider {
-    position: relative;
-    width: 100%;
-    height: 370px;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 370px;
+  overflow: hidden;
 }
 
 .item {
-    position: absolute;
-    text-align: center;
-    width: 300px;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    transition: 0.5s;
-    left: calc(50% - 100px - 80px);
-    top: 0;
-    align-items: center;
+  position: absolute;
+  text-align: center;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.5s;
+  left: calc(50% - 100px - 80px);
+  top: 0;
+  align-items: center;
 }
 
 .ingredients {
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #fff;    
-    margin-left: auto;
-    margin-right: auto;
-    font-family: monospace;    
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: monospace;
 }
 
 .bild {
-    max-height: 200px;
-    max-width: 200px;
-    padding: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;    
+  max-height: 200px;
+  max-width: 200px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
-#heading {
+@media screen and (min-width: 1200px) {
+  #heading {
     top: 0;
     position: absolute;
     border: none;
     color: #000;
     background: transparent;
     border: none;
-    font-size: xxx-large;
+    font-size: 2vw;
     font-family: monospace;
     font-weight: bold;
+  }
 }
 
-
 #mbutton {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    bottom: 100px;
-    border: none;
-    color: #000;
-    background: transparent;
-    border: none;
-    font-size: xxx-large;
-    font-family: monospace;
-    font-weight: bold;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 100px;
+  border: none;
+  color: #000;
+  background: transparent;
+  border: none;
+  font-size: xxx-large;
+  font-family: monospace;
+  font-weight: bold;
 }
 
 #mbutton:hover {
-    background-image: linear-gradient(45deg, #f3ec78, tomato);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;    
+  background-image: linear-gradient(45deg, #f3ec78, tomato);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
-
