@@ -46,18 +46,16 @@ body {
   display: block;
 }
 
-@media screen and (min-width: 1200px) {
-  #heading {
-    top: 0;
-    position: absolute;
-    border: none;
-    color: #000;
-    background: transparent;
-    border: none;
-    font-size: 2vw;
-    font-family: monospace;
-    font-weight: bold;
-  }
+#heading {
+  top: 0;
+  position: absolute;
+  border: none;
+  color: #000;
+  background: transparent;
+  border: none;
+  font-size: 2vw;
+  font-family: monospace;
+  font-weight: bold;
 }
 
 #mbutton {
