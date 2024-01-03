@@ -14,7 +14,7 @@ let items = document.querySelectorAll('.slider .item')
 const MAXTIME = 30
 const MAX = items.length
 let active = getRandomInt()
-let popup = true
+
 
 function getRandomInt () {
   return Math.floor(Math.random() * MAX)
@@ -52,6 +52,7 @@ function showActiveItem () {
   items[active].style.zIndex = 1
   items[active].style.filter = 'none'
   items[active].style.opacity = 1
+
   items[active].onclick = pick_a_recipe
 }
 
@@ -76,9 +77,10 @@ function loadShow () {
   }
   showActiveItem()
 }
-loadShow()
 
 async function pick_a_recipe () {
+  questionmark.style.opacity = 0
+
   for (var i = 0; i < MAXTIME; i++) {
     loadShow()
 
@@ -89,12 +91,16 @@ async function pick_a_recipe () {
   }
 
   hide_cards()
-  //items[active].style.opacity = 1
-  //items[active].onclick = pick_a_recipe
   showActiveItem()
   mbutton.firstChild.data = 'Winner!'
 }
 
-let mbutton = document.getElementById('mbutton')
-mbutton.onclick = pick_a_recipe
-items[active].onclick = pick_a_recipe
+function main() {
+  hide_cards()  
+  items[active].style.opacity = 0
+  let mbutton = document.getElementById('mbutton')
+  mbutton.onclick = pick_a_recipe
+  questionmark.onclick = pick_a_recipe
+}
+
+main()
