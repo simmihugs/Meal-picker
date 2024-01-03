@@ -41,12 +41,24 @@ body {
 .bild {
     max-height: 200px;
     max-width: 200px;
-    /* width: 200px; */
     padding: 10px;
     margin-left: auto;
     margin-right: auto;
     display: block;    
 }
+
+#heading {
+    top: 0;
+    position: absolute;
+    border: none;
+    color: #000;
+    background: transparent;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+}
+
 
 #mbutton {
     position: absolute;
@@ -63,7 +75,6 @@ body {
 }
 
 #mbutton:hover {
-    /* background-color: #f3ec78; */
     background-image: linear-gradient(45deg, #f3ec78, tomato);
     background-size: 100%;
     -webkit-background-clip: text;
