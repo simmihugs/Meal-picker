@@ -2,9 +2,8 @@ import { listArr } from "./config.js"
 
 var strHTML = ''
 listArr.forEach(function (item) {
-  strHTML += `<div class="item">
+  strHTML += `<div class="item" style="background-image: url('${item.image}'); background-size: 500px;">
 		  <h1>${item.name}</h1>
-		  <img class="bild" src="${item.image}" alt="dino" />
 		  ${item.message}
 		</div>`
 })

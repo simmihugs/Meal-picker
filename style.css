@@ -19,7 +19,8 @@ body {
   position: absolute;
   text-align: center;
   width: 300px;
-  background-color: #fff;
+  height: 300px;  
+  color: #fff;
   border-radius: 10px;
   padding: 20px;
   transition: 0.5s;
