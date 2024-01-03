@@ -47,13 +47,13 @@ body {
 }
 
 #heading {
-  top: 0;
+  top: 50px;
   position: absolute;
   border: none;
   color: #000;
   background: transparent;
   border: none;
-  font-size: 2vw;
+  font-size: xx-large;
   font-family: monospace;
   font-weight: bold;
 }
@@ -67,7 +67,7 @@ body {
   color: #000;
   background: transparent;
   border: none;
-  font-size: xxx-large;
+  font-size: xx-large;
   font-family: monospace;
   font-weight: bold;
 }
