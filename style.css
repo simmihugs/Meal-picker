@@ -8,6 +8,8 @@ body {
   font-family: monospace;
 }
 
+
+
 #textareabox {
   vertical-align: middle;
   display: -ms-flexbox;
@@ -20,40 +22,27 @@ body {
   align-items: center;
 }
 
-#textarea {
-  height: 90vh;
-  width: 90vh;  
-}
-
-/* Add a black background color to the top navigation */
-.topnav {
-  min-height: 100vh;
-  top: 0px;
-  background-color: transparent;
-  overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  top: 0px;
-  float: left;
-  color: #f2f2f2;
+#myformbutton {
   text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+  display: block;
+  margin: 0 auto;
+  border: none;
+  font-family: monospace;
+  background-color: transparent;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+#myformbutton:hover {
+  background-image: linear-gradient(45deg, #f3ec78, tomato);
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+.box {
+  float: left;
+  margin-right: 2%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.box:last-child {
+  margin-right: 0;
 }
 
 .slider {
