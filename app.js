@@ -1,23 +1,28 @@
-import { listArr } from "./config.js"
+import { abs, between, getRandomInt } from './mathstuff.js';
 
-var strHTML = ''
-listArr.forEach(function (item) {
-  strHTML += `<div class="item" style="background-image: url('${item.image}'); background-size: 500px;">
-		  <h1>${item.name}</h1>
-		  ${item.message}
-		</div>`
-})
-document.querySelector('#slider').insertAdjacentHTML('beforeend', strHTML)
-
-let items = document.querySelectorAll('.slider .item')
-
+let filename = './config.json'
+let items = []
+let active = 0
 const MAXTIME = 30
-const MAX = items.length
-let active = getRandomInt()
 
-
-function getRandomInt () {
-  return Math.floor(Math.random() * MAX)
+async function loadConfig () {
+  await fetch(filename)
+    .then(res => {
+      return res.json()
+    })
+    .then(data => {
+      data['listArr'].forEach(function (item) {
+        document.querySelector('#slider').insertAdjacentHTML(
+          'beforeend',
+          `<div class="item" style="background-image: url('${item.image}'); background-size: 500px;">
+          <h1>${item.name}</h1>
+                ${item.message}
+                </div>`
+        )
+      })
+    })
+  items = document.querySelectorAll('.slider .item')
+  active = getRandomInt(items.length)
 }
 
 function hide_cards () {
@@ -35,24 +40,11 @@ function getOtherItems (length) {
     .splice(0, length)
 }
 
-function between (i, x, y) {
-  return x <= i && x < y
-}
-
-function abs (i) {
-  return i < 0 ? -i : i
-}
-
-function dec (i) {
-  return i - 1
-}
-
 function showActiveItem () {
   items[active].style.transform = `none`
   items[active].style.zIndex = 1
   items[active].style.filter = 'none'
   items[active].style.opacity = 1
-
   items[active].onclick = pick_a_recipe
 }
 
@@ -67,7 +59,7 @@ function showOtherItem (item, index) {
 
 function loadShow () {
   hide_cards()
-  active = getRandomInt()
+  active = getRandomInt(items.length)
 
   let other_items = getOtherItems(14)
   let half = other_items.length / 2
@@ -95,12 +87,13 @@ async function pick_a_recipe () {
   mbutton.firstChild.data = 'Winner!'
 }
 
-function main() {
-  hide_cards()  
+async function main () {
+  await loadConfig()
+  hide_cards()
   items[active].style.opacity = 0
   let mbutton = document.getElementById('mbutton')
   mbutton.onclick = pick_a_recipe
   questionmark.onclick = pick_a_recipe
 }
 
-main()
+await main()
