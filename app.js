@@ -62,7 +62,7 @@ function showOtherItem (item, index) {
     `scale(${1 - 0.2 * abs(index)})` +
     `perspective(16px) rotateY(1deg)`
   item.style.filter = 'blur(5px)'
-  item.style.opacity = 0.6
+  item.style.opacity = 0.3
 }
 
 function loadShow () {
@@ -86,7 +86,7 @@ async function pick_a_recipe () {
 
     mbutton.firstChild.data = `${MAXTIME - i}`
     await new Promise(resolve => {
-      setTimeout(resolve, 200)
+      setTimeout(resolve, 400)
     })
   }
 
