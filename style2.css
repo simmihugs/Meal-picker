@@ -1,0 +1,48 @@
+div {
+  margin: auto;
+  height: 100%;
+}
+
+.column {
+  padding: 20px;
+  float: left;
+}
+
+.grid {
+  background-image: linear-gradient(to top right, #0ee6db, #057d1b);
+  padding: 1rem;
+}
+
+body {
+  background-image: linear-gradient(to top right, #0e4441, rgb(51, 228, 160));
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  color: beige;
+  text-shadow: 1px 1px 2px black;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#mbutton {
+  margin-top: 50vh;
+  background: transparent;
+  border: none;
+  font-size: xxx-large;
+  font-family: monospace;
+}
+
+#mbutton:hover {
+  color: red;
+}
