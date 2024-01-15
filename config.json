@@ -1,8 +1,43 @@
 {
-  "listArr": [
+  "listArr": [    
+    {
+      "name": "Nudelsuppe",
+      "image": "images/nudelsuppe.jpg",
+      "message": "Schön warm"      
+    },
+    {
+      "name": "Hähnchen mit Brokoli",
+      "image": "images/chickengreen.jpg",
+      "message": "No carbs"      
+    },
+    {
+      "name": "Kartoffelcurry",
+      "image": "images/kartoffelcurry.jpg",
+      "message": "Kartoffeln yum"      
+    },
+    {
+      "name": "Avocadobowl",
+      "image": "images/avocadobowl.jpg",
+      "message": "Mhmm lecka"
+    },
+    {
+      "name": "Taboulé mit Rothkohl",
+      "image": "images/red-cabage.jpg",
+      "message": "Mal was neues"
+    },
+    {
+      "name": "Obstschuessel",
+      "image": "images/obstschuessel.jpg",
+      "message": "Magerkost"
+    },
+    {
+      "name": "Indisches Linsendaal",
+      "image": "images/dal.jpg",
+      "message": "Mal was neues"
+    },
     {
       "name": "Käsekuchen",
-      "image": "images/cake.png",
+      "image": "images/cake.jpg",
       "message": "Hurra! heute ist cheat day!"
     },
     {

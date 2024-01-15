@@ -3,7 +3,7 @@ import { abs, between, getRandomInt } from './mathstuff.js';
 let filename = './config.json'
 let items = []
 let active = 0
-const MAXTIME = 30
+const MAXTIME = 10
 
 async function loadConfig () {
   await fetch(filename)
