@@ -1,6 +1,11 @@
 {
   "listArr": [    
     {
+      "name": "Gnochi",
+      "image": "images/gnochi.jpg",
+      "message": "Schön italienisch"      
+    },
+    {
       "name": "Nudelsuppe",
       "image": "images/nudelsuppe.jpg",
       "message": "Schön warm"      
