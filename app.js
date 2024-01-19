@@ -1,4 +1,4 @@
-import { abs, between, getRandomInt } from './mathstuff.js';
+import { abs, between, getRandomInt } from './mathstuff.js'
 
 let filename = './config.json'
 let items = []
@@ -60,6 +60,7 @@ function showOtherItem (item, index) {
 function loadShow () {
   hide_cards()
   active = getRandomInt(items.length)
+  console.log(items[active])
 
   let other_items = getOtherItems(14)
   let half = other_items.length / 2
